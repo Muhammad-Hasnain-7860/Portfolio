@@ -135,6 +135,8 @@ header {
 }
 
 .logo {
+    width: 133px;
+    height: 40px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -272,19 +274,12 @@ a:hover {
     }
 }
 
-.hero,
-.nav,
-.about,
-.skillcontainer {
-    max-width: 1200px;
-    width: 100%;
-}
+
 
 /* About Start  */
 
 .aboutcontainer {
     padding: 20px 0;
-    margin-bottom: 40px;
 }
 
 .about {
@@ -316,6 +311,8 @@ a:hover {
     border-radius: 10px;
     object-fit: cover;
 }
+
+
 
 .aboutbtn {
     display: inline-block;
@@ -350,6 +347,10 @@ a:hover {
     .aboutbtn {
         margin: 0 auto;
     }
+
+    .aboutpara {
+        line-height: 1.7;
+    }
 }
 
 .aboutbtn:hover {
@@ -363,7 +364,9 @@ a:hover {
 
 .skillcontainer {
     padding: 20px 0;
-    margin-bottom: 40px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
 }
 
 .containerskill {
@@ -395,9 +398,10 @@ a:hover {
 }
 
 .skill-card img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
+    margin-bottom: 20px;
 }
 
 .skill-card:hover {
@@ -417,9 +421,88 @@ a:hover {
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
+    font-size: 35px;
     color: #333;
     font-weight: 600;
-    letter-spacing: 1px;
+
 }
 
+/* Services Start  */
+
+.servicescontainer {
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.myervices {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+
+}
+
+.myservicepara {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.mainservices {
+    display: flex;
+    margin: 0 auto;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+
+}
+
+.service-card {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.service-card .servicesicon {
+    font-size: 2.5rem;
+    color: #555;
+    margin-bottom: 15px;
+
+}
+
+.service-card .servicesheading {
+    font-size: 20px;
+
+
+}
+
+.service-card:hover .servicesicon {
+    transition: all 0.6s ease;
+    color: rgb(139, 182, 254);
+
+}
+
+.service-card:hover .servicesheading {
+    transition: all 0.6s ease;
+    color: rgb(139, 182, 254);
+
+}
+
+.hero,
+.nav,
+.about,
+.skills-section .services {
+    max-width: 1200px;
+    width: 100%;
+}
