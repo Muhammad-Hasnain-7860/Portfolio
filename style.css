@@ -276,6 +276,8 @@ a:hover {
 
 
 
+
+
 /* About Start  */
 
 .aboutcontainer {
@@ -369,6 +371,17 @@ a:hover {
 
 }
 
+.skills-section {
+       display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 40px 0;
+    gap: 40px;
+}
+
 .containerskill {
     padding: 20px 0;
     margin-bottom: 40px;
@@ -418,6 +431,7 @@ a:hover {
 
 
 .myskill {
+    width: 100%;
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
@@ -434,17 +448,29 @@ a:hover {
     margin-bottom: 40px;
 }
 
+.services {
+       display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 40px 0;
+    gap: 40px;
+}
+
 .myervices {
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 35px;
     font-weight: 600;
     color: #333;
-    margin-bottom: 10px;
 
 }
 
 .myservicepara {
+    width: 100%;
     text-align: center;
     font-size: 16px;
     color: #555;
@@ -502,7 +528,282 @@ a:hover {
 .hero,
 .nav,
 .about,
-.skills-section .services {
+.skills-section, .services ,.contact {
     max-width: 1200px;
     width: 100%;
 }
+
+
+/* contact start  */
+
+.contactcontainer {
+    padding: 20px 0;
+    margin-bottom: 40px;
+    background: #f9f9ff;
+}
+
+.mycontact {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.mycontactpara {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+
+}
+
+.contactinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+
+}
+
+.contact-card {
+    min-width: 250px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+    border: 1px solid rgba(139, 182, 254, 0.6);
+
+    border-radius: 10px;
+
+}
+
+.contact-card .contacticon {
+    font-size: 2.5rem;
+    color: #555;
+    margin-bottom: 10px;
+
+}
+
+.contact {
+    width: 80vw;
+    margin: 0 auto;
+
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+    transition: all 0.8s ease;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    border: 1px solid rgb(139, 182, 254);
+
+
+}
+
+.contact-card:hover .contacticon {
+    transition: all 0.6s ease;
+    color: rgb(139, 182, 254);
+}
+
+/* Form start  */
+
+.contact-form-wrapper {
+    font-family: 'Poppins', sans-serif;
+    width: 350px;
+    margin: 50px auto;
+    perspective: 1000px;
+}
+
+.contact-form-card {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: rgb(139, 182, 254);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact-form-card:hover {
+    height: 500px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px);
+}
+
+.form-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(139, 182, 254);
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.title-text {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+}
+
+.contact-form-card:hover .title-text {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.contact-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 20px 20px 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white;
+    border-radius: 12px;
+}
+
+.contact-form-card:hover .contact-form {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-main-title {
+    color: #1c1e21;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.form-subtitle {
+    color: #65676b;
+    font-size: 13px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 11px 12px;
+    background: #f5f6f7;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1c1e21;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: rgb(139, 182, 254);
+    background: white;
+    box-shadow: 0 0 0 2px rgba(139, 182, 254, 0.2);
+}
+
+.form-input::placeholder {
+    color: #8a8d91;
+}
+
+textarea.form-input {
+    min-height: 70px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 11px;
+    background: rgb(139, 182, 254);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.submit-btn:hover {
+    background: rgb(119, 162, 234);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(139, 182, 254, 0.4);
+}
+
+/* Floating label effect */
+.floating-label {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    font-size: 13px;
+    color: #8a8d91;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.form-input:focus~.floating-label,
+.form-input:not(:placeholder-shown)~.floating-label {
+    top: -6px;
+    left: 8px;
+    font-size: 10px;
+
+    background: white;
+    padding: 0 4px;
+}
+
+.alt-action {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #65676b;
+    width: 100%;
+}
+
+.alt-action a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.alt-action a:hover {
+    text-decoration: underline;
+
+}
+
