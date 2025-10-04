@@ -135,6 +135,7 @@ header {
 }
 
 .logo {
+    
     width: 133px;
     height: 40px;
     font-family: 'Poppins', sans-serif;
@@ -175,6 +176,8 @@ a:hover {
     .logo {
         text-align: center;
         margin-bottom: 10px;
+        position: relative;
+        top: 10px;
     }
 
     ul {
@@ -538,7 +541,7 @@ a:hover {
 
 .contactcontainer {
     padding: 20px 0;
-    margin-bottom: 40px;
+    
     background: #f9f9ff;
 }
 
@@ -618,6 +621,7 @@ a:hover {
 /* Form start  */
 
 .contact-form-wrapper {
+    width: 80vw;
     font-family: 'Poppins', sans-serif;
     width: 350px;
     margin: 50px auto;
@@ -787,23 +791,30 @@ textarea.form-input {
     padding: 0 4px;
 }
 
-.alt-action {
+
+
+@media(max-width:600px) {
+    .contact-form-wrapper {
+        width: 90%;
+    }
+}
+
+.footer {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px 0;
+    
+}
+
+.footerpara {
     text-align: center;
-    margin-top: 5px;
-    font-size: 12px;
-    color: #65676b;
-    width: 100%;
-}
-
-.alt-action a {
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    margin: 10px;
-}
-
-.alt-action a:hover {
-    text-decoration: underline;
+    padding: 15px 0;
+    background-color: rgba(146, 135, 135, 0.3);
+    font-family: poppins , sans-serif;
+    color: #333;
+    font-size: 14px;
+    
+    font-weight: 500;
 
 }
 
