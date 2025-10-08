@@ -302,9 +302,6 @@ a:hover {
 }
 
 
-
-
-
 /* About Start  */
 
 .aboutcontainer {
@@ -340,8 +337,6 @@ a:hover {
     border-radius: 10px;
     object-fit: cover;
 }
-
-
 
 .aboutbtn {
     display: inline-block;
@@ -483,7 +478,7 @@ a:hover {
     width: 80vw;
     margin: 0 auto;
     padding: 40px 0;
-    gap: 40px;
+    
 }
 
 .myervices {
@@ -493,6 +488,7 @@ a:hover {
     font-size: 35px;
     font-weight: 600;
     color: #333;
+    
 
 }
 
@@ -502,6 +498,7 @@ a:hover {
     font-size: 16px;
     color: #555;
     line-height: 1.6;
+    margin-bottom: 20px;
 
 }
 
@@ -551,7 +548,6 @@ a:hover {
     color: rgb(139, 182, 254);
 
 }
-
 
 
 
@@ -816,15 +812,22 @@ textarea.form-input {
     }
 }
 
+/* Footer  */
+
+/* Footer Styles */
 footer {
     background-color: rgba(146, 135, 135, 0.3);
-
+    padding: 40px 0 20px;
+    margin-top: 50px;
 }
 
 .footer {
     width: 80vw;
     margin: 0 auto;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
 .footerpara {
@@ -834,16 +837,121 @@ footer {
     color: #333;
     font-size: 14px;
     font-weight: 500;
-
+    margin: 0;
 }
 
-.hero,
-.nav,
-.about,
-.skills-section,
-.services,
-.contact,
-.footer {
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7e7e7;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    height: 50px;
+    width: 150px; 
+    border-radius: 8px;
+}
+
+.card::before, .card::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: 0.25s linear;
+    z-index: 1;
+}
+
+.card::before {
+    content: "";
+    left: 0;
+    justify-content: flex-end;
+    background-color: rgb(139, 182, 254); /* Your blue color */
+}
+
+.card::after {
+    content: "";
+    right: 0;
+    justify-content: flex-start;
+    background-color: rgb(119, 162, 234); /* Darker blue */
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card:hover span {
+    opacity: 0;
+    z-index: -3;
+}
+
+.card:hover::before {
+    opacity: 0.5;
+    transform: translateY(-100%);
+}
+
+.card:hover::after {
+    opacity: 0.5;
+    transform: translateY(100%);
+}
+
+.card span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+}
+
+.card .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* 50% for 2 buttons */
+    height: 100%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.card .social-link svg {
+    text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+    transform: scale(1);
+    width: 24px;
+    height: 24px;
+    fill: white; /* White icons */
+}
+
+.card .social-link:hover {
+    background-color: rgba(139, 182, 254, 0.3); /* Your blue color with transparency */
+    animation: bounce_613 0.4s linear;
+}
+
+.card .social-link:hover svg {
+    fill: rgb(139, 182, 254); /* Blue color on hover */
+}
+
+@keyframes bounce_613 {
+    40% { transform: scale(1.4); }
+    60% { transform: scale(0.8); }
+    80% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.nav ,.hero, .about, .skills-section, .services ,.contact ,.footer {
     max-width: 1200px;
     width: 100%;
 }
